@@ -19,29 +19,33 @@ namespace MultiShop.Catalog.Services.ProductServices
             _mapper = mapper;
         }
 
-        public Task CreateProdcutAsync(CreateProductDto createProductDto)
+        public async Task CreateProdcutAsync(CreateProductDto createProductDto)
         {
-            throw new NotImplementedException();
+            var values = _mapper.Map<Product>(createProductDto);
+            await _productCollection.InsertOneAsync(values);
         }
 
-        public Task DeleteProdcutAsync(string id)
+        public async Task DeleteProdcutAsync(string id)
         {
-            throw new NotImplementedException();
+            await _productCollection.DeleteOneAsync(x=> x.ProductID == id);
         }
 
-        public Task<List<ResultProductDto>> GetAllCategoryAsync()
+        public async Task<List<ResultProductDto>> GetAllCategoryAsync()
         {
-            throw new NotImplementedException();
+            var values = await _productCollection.Find(x => true).ToListAsync();
+            return _mapper.Map<List<ResultProductDto>>(values);
         }
 
-        public Task<GetByIdProductDto> GetByIdProdcutAsync(string id)
+        public async Task<GetByIdProductDto> GetByIdProdcutAsync(string id)
         {
-            throw new NotImplementedException();
+            var values = await _productCollection.Find(x=>x.ProductID == id).ToListAsync();
+            return _mapper.Map<GetByIdProductDto>(values);
         }
 
-        public Task UpdateProdcutAsync(UpdateProductDto updateProductDto)
+        public async Task UpdateProdcutAsync(UpdateProductDto updateProductDto)
         {
-            throw new NotImplementedException();
+            var values = _mapper.Map<Product>(updateProductDto);
+            await _productCollection.FindOneAndReplaceAsync(x=>x.ProductID == updateProductDto.ProductID, values);
         }
     }
 }
