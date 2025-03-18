@@ -1,13 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35707.178 d17.12
+VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{46F35956-AA2F-462F-9E0E-695CA44755EF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Catalog", "Catalog", "{ED8DCEF5-E01F-4774-A034-9EA24C3D3D08}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiShop.Catalog", "Services\Catalog\MultiShop.Catalog\MultiShop.Catalog.csproj", "{4BC610C4-185C-4A20-B833-FD67ADE7A8D8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Discount", "Discount", "{06E6FAF6-B851-4541-A2A1-8EF62508E8D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiShop.Discount", "Services\Discount\MultiShop.Discount\MultiShop.Discount.csproj", "{EC46DD8E-1E01-43FE-9861-9E3773F16308}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,6 +23,10 @@ Global
 		{4BC610C4-185C-4A20-B833-FD67ADE7A8D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4BC610C4-185C-4A20-B833-FD67ADE7A8D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4BC610C4-185C-4A20-B833-FD67ADE7A8D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC46DD8E-1E01-43FE-9861-9E3773F16308}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC46DD8E-1E01-43FE-9861-9E3773F16308}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC46DD8E-1E01-43FE-9861-9E3773F16308}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC46DD8E-1E01-43FE-9861-9E3773F16308}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -26,5 +34,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{ED8DCEF5-E01F-4774-A034-9EA24C3D3D08} = {46F35956-AA2F-462F-9E0E-695CA44755EF}
 		{4BC610C4-185C-4A20-B833-FD67ADE7A8D8} = {ED8DCEF5-E01F-4774-A034-9EA24C3D3D08}
+		{06E6FAF6-B851-4541-A2A1-8EF62508E8D1} = {46F35956-AA2F-462F-9E0E-695CA44755EF}
+		{EC46DD8E-1E01-43FE-9861-9E3773F16308} = {06E6FAF6-B851-4541-A2A1-8EF62508E8D1}
 	EndGlobalSection
 EndGlobal
